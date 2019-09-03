@@ -8,6 +8,7 @@ cluster:
   project: k8s-rcambiental-com-br
   provider: gke
   zone: southamerica-east1-c
+gitops: true
 environments:
 - key: dev
 - key: staging
