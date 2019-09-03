@@ -2,6 +2,8 @@ nginx-ingress:
   controller:
     extraArgs:
       publish-service: kube-system/jxing-nginx-ingress-controller
+      # tcp-services-configmap: $(POD_NAMESPACE)/tcp-services
+      # udp-services-configmap: $(POD_NAMESPACE)/udp-services
     service:
       omitClusterIP: true
   defaultBackend:
@@ -9,3 +11,6 @@ nginx-ingress:
       omitClusterIP: true
   rbac:
     create: true
+  # tcp:
+  #   "3306": "jx-production/mariadb:3036"
+  #   "3307": "jx-staging/mariadb:3036"

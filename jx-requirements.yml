@@ -1,31 +1,38 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: rca-k8s-sa-east1
+  environmentGitOwner: rcambiental
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: k8s-rcambiental-com-br
   provider: gke
-  zone: ""
-gitops: false
+  zone: southamerica-east1-c
 environments:
 - key: dev
 - key: staging
 - key: production
 ingress:
-  domain: ""
-  externalDNS: false
+  domain: k8s-rcambiental.com
+  externalDNS: true
+  namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
-    production: false
+    email: renatoaraujoc@rcambiental.com.br
+    enabled: true
+    production: true
 kaniko: true
 secretStorage: local
 storage:
   logs:
     enabled: false
-    url: ""
+    url: gs://rca-jx-logs/
   reports:
     enabled: false
-    url: ""
+    url: gs://rca-jx-reports/
   repository:
     enabled: false
-    url: ""
+    url: gs://rca-jx-repository/
+versionStream:
+  ref: v1.0.3
+  url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow

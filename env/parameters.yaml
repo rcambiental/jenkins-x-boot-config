@@ -1,0 +1,9 @@
+adminUser:
+  password: local:rca-k8s-sa-east1/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  token: local:rca-k8s-sa-east1/pipelineUser:token
+  username: rcambiental-bot
+prow:
+  hmacToken: local:rca-k8s-sa-east1/prow:hmacToken
