@@ -3,6 +3,7 @@ adminUser:
   username: admin
 enableDocker: false
 pipelineUser:
+  email: bot@rcambiental.com.br
   token: local:rca-k8s-sa-east1/pipelineUser:token
   username: rcambiental-bot
 prow:

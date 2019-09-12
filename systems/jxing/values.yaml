@@ -2,7 +2,7 @@ nginx-ingress:
   controller:
     replicaCount: 3
     extraArgs:
-      publish-service: kube-system/jxing-nginx-ingress-controller
+      publish-service: jx/jxing-nginx-ingress-controller
       # tcp-services-configmap: $(POD_NAMESPACE)/tcp-services
       # udp-services-configmap: $(POD_NAMESPACE)/udp-services
     service:

@@ -1,6 +1,7 @@
 cluster:
   clusterName: rca-k8s-sa-east1
   environmentGitOwner: rcambiental
+  environmentGitPrivate: true
   gitKind: github
   gitName: github
   gitServer: https://github.com
@@ -8,11 +9,11 @@ cluster:
   project: k8s-rcambiental-com-br
   provider: gke
   zone: southamerica-east1-c
-gitops: true
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
   domain: k8s-rcambiental.com
   externalDNS: true
@@ -34,6 +35,6 @@ storage:
     enabled: false
     url: gs://rca-jx-repository/
 versionStream:
-  ref: v1.0.3
+  ref: master
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow
